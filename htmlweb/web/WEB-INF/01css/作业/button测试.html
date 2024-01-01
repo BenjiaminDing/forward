@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+div{
+    width: 100px;
+    height: 100px;
+    background-color:pink;
+}
+        /* 测试发现button标签属于行内块*/
+        button{
+            height: 200px;
+            width: 100px;
+        }
+        /* span 和em属于 行内元素 不能设置宽度 */
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        em{
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<button>登录</button>
+<input type="text">
+<div></div>
+<span>999</span>
+<em>Nihao</em>
+
+</body>
+</html>

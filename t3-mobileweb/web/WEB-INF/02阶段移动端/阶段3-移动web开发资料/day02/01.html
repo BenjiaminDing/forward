@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li{
+            list-style: none;
+        }
+        .container{
+            width: 750px;
+            /*height: 1000px;*/
+            margin: 0 auto;
+                background-color: #f0ad4e;
+        }
+
+        .container ul li{
+            float:left;
+            width: 75px;
+            height: 30px;
+            /*border-right: 1px solid #ff6787;*/
+                background-color: #b3d4fc;
+        }
+        /*  and后面空格 一定留*/
+        @media screen and (max-width: 768px) {
+              .container{
+                  width: 100%;
+              }
+            .container ul li{
+                width: 25%;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <ul>
+        <li>导航栏1</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏5</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏8</li>
+        <li>导航栏9</li>
+        <li>导航栏10</li>
+    </ul>
+</div>
+</body>
+</html>

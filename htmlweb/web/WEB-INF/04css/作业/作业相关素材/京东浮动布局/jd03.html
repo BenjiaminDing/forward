@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东浮动布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            /* 30*/
+            width: 1214px;
+            height: 460px;
+            background-color: #ccc;
+            margin: 200px auto;
+            /*77777777777777777777  解决外边距 塌陷问题 */
+            /*overflow:hidden*/
+
+        }
+
+        .sh1, .sh2, .sh3{
+            width: 350px;
+            height: 390px;
+            /*background-color: pink;*/
+            float: left;
+
+
+        }
+        .sh1{
+            margin: 35px 50px 35px 32px;
+        }
+        .sh3{
+            margin: 35px 32px 35px 50px;
+        }
+
+        .sh2{
+            margin: 35px auto;
+        }
+        .kk{
+            width: 360px;
+            height: 390px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+
+        ul li{
+            /*display: ;*/
+            width: 170px;
+            height: 190px;
+            float: left;
+            margin-right:10px ;
+            margin-bottom:10px ;
+
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="main">
+
+    <div class="sh1">
+        <ul class="kk" >
+            <li><img src="京东图片素材/left01.png" alt=""></li>
+            <li><img src="京东图片素材/left02.png" alt=""></li>
+            <li><img src="京东图片素材/left03.png" alt=""></li>
+            <li><img src="京东图片素材/left04.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="sh2"> <a href="#"><img src="京东图片素材/center.png" alt=""></a></div>
+    <div class="sh3 ">
+        <ul class="kk" >
+            <li><img src="京东图片素材/right02.png" alt=""></li>
+            <li><img src="京东图片素材/right01.png" alt=""></li>
+            <li><img src="京东图片素材/right03.png" alt=""></li>
+            <li><img src="京东图片素材/right04.png" alt=""></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

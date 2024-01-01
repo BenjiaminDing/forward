@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>综合案例-产品模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #f5f5f5ff;
+        }
+        a {
+            text-decoration: none;
+        }
+        .goods{
+            width: 295px;
+            height: 417px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+        /*  后代选择器*/
+        .goods img{
+
+            /* 商品东西图 一定设置宽高   */
+            width: 295px;
+            height: 220px;
+        }
+
+        .goods .text{
+            padding: 0 25px;
+        }
+
+        .goods .intro{
+            /*background-color: #87ceeb;*/
+
+            /* 使用外边距 盒子大小没变  只是下移位置*/
+            margin-top: 32px;
+            /*padding-top: 32px;*/
+
+            font-size: 14px;
+            height: 90px;
+        }
+
+        .goods   p{
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+        .goods  a{
+            display: block;
+            font-size: 14px;
+            margin-top: 14px;
+            color: #333;
+        }
+        .goods .text a span {
+            color: #ff6787;
+        }
+
+        .goods .text a i {
+            font-style: normal;
+            /*color: #e1e7f1;*/
+            color: #b0b0b0;
+            margin: 0 8px 0 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="goods">
+    <img src="./images/img.jpg" alt="">
+
+    <div class="text">
+        <div class="intro">
+            快递牛，整体不错蓝牙可以说秒连。红米给力
+        </div>
+        <p>来自于 117384232  ben 的评价</p>
+        <!--                margin使用-->
+        <a href="">Redmi AirDots真无线蓝...  <i>|</i> <span>99.9元</span></a>
+    </div>
+</div>
+
+
+<!--<hr>-->
+
+<!--       <div class="goods">-->
+<!--           <img src="./images/img.jpg" alt="">-->
+
+<!--           <div class="text">-->
+<!--               <div class="intro">-->
+<!--                   快递牛，整体不错蓝牙可以说秒连。红米给力-->
+<!--               </div>-->
+<!--               <p>来自于 117384232  ben 的评价</p>-->
+
+<!--               <dvi>Redmi AirDots真无线蓝...</dvi>-->
+<!--           </div>-->
+<!--       </div>-->
+
+<!--       <hr>-->
+
+
+</body>
+</html>

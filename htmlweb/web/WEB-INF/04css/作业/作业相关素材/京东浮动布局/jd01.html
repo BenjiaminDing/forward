@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东浮动布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 1214px;
+            height: 460px;
+            background-color: #ccc;
+
+            margin: 10px auto;
+            /*margin: 35px 32px 35px 32px;  父级的margin 和子类存在 塌陷问题*/
+        }
+
+        .cent{
+            width: 1150px;
+            height: 390px;
+            background-color: orange;
+            margin: 35px 32px 35px 32px;
+        }
+        /*.sh1, .sh2 ,.sh3{*/
+        /*    width: 350px;*/
+        /*    height: 350px;*/
+        /*    background-color: pink;*/
+        /*    float: left;*/
+        /*    margin-right: 50px;*/
+        /*}*/
+    </style>
+
+</head>
+<body>
+<!--  28px  50px  32px-->
+<div class="main">
+
+    <div  class="cent">
+<!--        <div class="sh1"></div>-->
+<!--        <div class="sh2"></div>-->
+<!--        <div class="sh3"></div>-->
+    </div>
+
+</div>
+
+</body>
+</html>

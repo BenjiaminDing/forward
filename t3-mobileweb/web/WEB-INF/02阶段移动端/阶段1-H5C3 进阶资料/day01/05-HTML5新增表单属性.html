@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增表单属性</title>
+    <style>
+    /*标签的属性*/
+        input::placeholder {
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+<form action="a.js">
+    <!-- 01 autofocus   光标聚焦
+        02 placeholder   提示信息也不会占用位置
+    -->
+    <input
+            placeholder="pink老师"
+            autofocus="autofocus"
+            type="search"
+           name="sear"
+           id="tt"
+           required="required"
+           autocomplete="on"
+
+
+
+    >
+
+    <br>
+    <input type="file" name="" id="" multiple="multiple">
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>

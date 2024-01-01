@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        /* 1.未访问的链接 a:link  把没有点击过的(访问过的)链接选出来 */
+        /*a:link {*/
+        /*    color: #e65d89;*/
+        /*    text-decoration: none;*/
+        /*}*/
+
+        /*2. a:visited 选择点击过的(访问过的)链接 */
+        /*        a:visited {
+                    color: orange;
+                }*/
+
+        /*
+
+        只需要学习3. a:hover 选择鼠标经过的那个链接 */
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        /*：hover前面可以写任何选择器*/
+        div:hover{
+            /* 让div内容变色*/
+            color: orange;
+            /* 让背景变色*/
+            background-color: red;
+
+        }
+        .bb:hover{
+            background-color: black;
+        }
+
+        input:focus{
+            color:skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+<br>
+
+<div>888</div>
+<br>
+<div class="bb"></div>
+<br>
+<input type="text"  value="输入名字">
+</body>
+
+</html>

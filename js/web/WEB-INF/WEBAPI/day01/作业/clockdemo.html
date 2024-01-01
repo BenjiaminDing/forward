@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clk{
+            overflow: hidden;
+            width: 600px;
+            height: 600px;
+            margin: 20px;
+            background: url("./clock.jpg")  no-repeat ;
+            /*background-size: 300px auto;*/
+            position: relative;
+            background-color: #b3d4fc;
+        }
+        img[src='hour.png']{
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        img[src='minute.png']{
+            position: absolute;
+            top: 0px;
+            left: 50%;
+
+            transform: translateX(-50%)  rotateZ(-90deg);
+        }
+
+        img[src='second.png']{
+            position: absolute;
+            top: 0px;
+            left: 47%;
+
+            transform: translateX(-50%)  rotate(0deg);
+            animation: rotateben 60s steps(60) infinite;
+        }
+
+        /*animation: run 3s steps(12) infinite,!*  处理背景图的运动*!*/
+        /*                            translate 3s linear  forwards ;!*  处理 当前框 div的移动  infinite backwards*!*/
+
+
+        @keyframes rotateben {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="clk"><img src="hour.png" alt=""> <img src="minute.png" alt=""> <img src="second.png" alt=""></div>
+</body>
+</html>

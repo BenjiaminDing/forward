@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示模式之行内块元素(特殊情况)</title>
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+
+        }
+        textarea{
+        /*    解决行内块之间间隙问题使用 float */
+        /*    float: left;*/
+            background-color: #8888cc;
+        }
+        span    {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+<!--  点击查看浏览器可以发现 input行内块元素是 有间隙的  207 35.2-->
+    <input type="text">
+    <input type="text">
+<br>
+<hr>
+<!--textarea 也属于行内块-->
+<textarea cols="50" rows="5" ></textarea>
+<textarea cols="50" rows="5" ></textarea>
+<span>9999</span>
+</body>
+
+</html>

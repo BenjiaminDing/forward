@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>利用浮动和标准流顺序 center</title>
+    <style>
+        .f{
+            width: 1200px;
+            /*background-color: red;*/
+            margin: 10px auto ;
+        }
+        .b1{
+            width: 200px;
+            float: left;
+            background-color: pink;
+        }
+        .b2{
+            width: 200px;
+            /*float: left;*/
+            background-color: blanchedalmond;
+            /*margin-left: 100px;*/
+            margin: 0  auto  ;
+        }
+
+        .b3{
+            width: 200px;
+            float: right;
+            background-color: blue;
+        }
+
+        /*a{*/
+        /*    background-color: #56575b;*/
+        /*    display: block;*/
+        /*    width: 230px;*/
+        /*    height: 40px;*/
+        /*    text-decoration: none;*/
+        /*    !*设置文字,,让单行文字垂直剧中，让行高等于盒子高度*!*/
+        /*    color: #FFF;*/
+        /*    font-size: 14px;*/
+        /*    text-indent: 28px;*/
+        /*    line-height: 40px;*/
+        /*}*/
+        /*a:hover{*/
+        /*    background-color:#ff6f00 ;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+
+<div class="f">
+    <div class="b1">first</div>
+
+
+    <div  class="b3">third</div>
+    <div class="b2">second</div>
+
+
+</div>
+</body>
+
+</html>

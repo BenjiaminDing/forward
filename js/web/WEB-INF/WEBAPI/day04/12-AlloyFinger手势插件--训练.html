@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlloyFinger手势插件</title>
+  <style>
+    .nav {
+      width: 200px;
+      height: 40px;
+      border: 3px solid pink;
+    }
+
+    .item {
+      width: 350px;
+      height: 40px;
+      line-height: 40px;
+      background-color: skyblue;
+      transition: all .3s;
+    }
+
+    .active {
+      transform: translateX(-50px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="item">
+      AlloyFinger是腾讯AlloyTeam 开发
+    </div>
+  </div>
+  <!-- 1.引入AlloyFinger手势插件 -->
+  <script src="https://unpkg.com/alloyfinger@0.1.16/alloy_finger.js"></script>
+  <script>
+    // 2.使用插件
+    // element是指定给哪个元素添加滑动效果
+    const item = document.querySelector('.item')
+
+    new AlloyFinger(item, {
+
+      swipe: function (evt) {
+        console.log("swipe" + evt.direction);
+
+        if (evt.direction==='Left'){
+          item.classList.add('active')
+        }
+        else {
+          item.classList.remove('active')
+        }
+
+      }
+
+    })
+
+
+  </script>
+</body>
+
+</html>

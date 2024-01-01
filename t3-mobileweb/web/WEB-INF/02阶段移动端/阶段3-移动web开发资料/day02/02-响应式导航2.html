@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document222</title>
+
+    <!-- 引入bootstrap 样式文件 -->
+    <link rel="stylesheet" href="./alibaixiu/bootstrap/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        ul{
+            background-color: red;
+            margin-bottom: 0;
+        }
+        .container ul li {
+            float: left;
+            width: 93.75px;
+            height: 30px;
+            border-right: 1px solid #ff6f00;
+            background-color: green;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .container ul li {
+                width: 33.33%;
+            }
+        }
+
+        .vv{
+            background-color: #b3d4fc;
+        }
+
+        .vv img{
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <ul class="clearfix">
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+        <li>导航栏</li>
+    </ul>
+
+
+    <div class="vv">
+        <img src="./alibaixiu/images/logo.png" alt="">
+    </div>
+</div>
+</body>
+
+</html>

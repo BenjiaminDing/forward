@@ -1,0 +1,251 @@
+.main{
+    margin-left: 220px;
+    margin-top: 10px;
+
+    /*width: 100%;*/
+    height: 455px;
+}
+.main .focus{
+    float: left;
+    width: 721px;
+    height: 455px;
+    /*background-color: #b3d4fc;*/
+}
+.main .newsflash{
+    float: right;
+    /*margin-left: 9px;*/
+    width: 250px;
+    height: 455px;
+    /*background-color: yellow;*/
+
+
+
+}
+
+.main .newsflash .news{
+    /*  130+34*/
+    height: 164px;
+    width: 100%;
+    /*background-color: #b3d4fc;*/
+    border: 1px solid #ccc;
+
+}
+
+.main .newsflash .news-hd{
+    height: 33px;
+    line-height: 33px;
+    width: 100%;
+    /*background-color: #b3d4fc;*/
+    font-size: 14px;
+    border-bottom: 1px dotted #ccc;
+
+}
+
+.main .newsflash .news-hd h5{
+    float: left;
+    margin-left: 16px;
+}
+.main .newsflash .news-hd a{
+    float: left;
+    margin-left: 110px;
+
+}
+
+.main .newsflash .news-hd a::after{
+    margin-left: 8px;
+    font-family: 'icomoon';
+    content: '\e920';
+
+
+}
+.main .newsflash .news-bd{
+    height: 130px;
+    padding: 5px 15px 0;
+
+}
+
+
+.main .newsflash .news-bd li {
+    background-color: #b3d4fc;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    /* 1.这个单词的意思是如果文字显示不开也必须强制一行内显示 */
+    white-space: nowrap;
+
+    /* 2.溢出的部分隐藏起来 */
+    overflow: hidden;
+    /* 3. 文字溢出的时候用省略号来显示 */
+    text-overflow: ellipsis;
+}
+
+
+.main .newsflash .lifeservice{
+    overflow: hidden;
+    height: 213px;
+    /*border: 1px solid #ccc;*/
+    border-left:1px solid #ccc; ;
+    border-right:1px solid #ccc; ;
+}
+
+.main .newsflash .lifeservice ul{
+    width: 252px;
+}
+
+.main .newsflash .lifeservice ul li{
+
+    float: left;
+    width: 63px;
+    height: 71px;
+    /*border: 1px solid #cccccc;  会叠加*/
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    /*background-color: #b3d4fc;*/
+
+    text-align: center;
+}
+
+.main .newsflash .lifeservice ul li  i{
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    background:url("../images/icons.png") no-repeat  -19px   -15px ;
+}
+
+.main .newsflash .bargain{
+    height: 74px;
+    /*width: 100%;*/
+    margin-top: 3px;
+    background-color: #0086b3;
+}
+
+
+/* recom*/
+
+.recom {
+    height: 164px;
+
+
+    margin-top: 12px;
+
+}
+.recom_hd {
+    float: left;
+    height: 164px;
+    width: 205px;
+    text-align: center;
+    line-height:164px ;
+    background-color: #5c5351;
+}
+.recom_bd  {
+    float: left;
+    height: 164px;
+    background-color: #ebebeb;
+
+
+}
+
+.recom_bd li {
+    float: left;
+
+}
+.recom_bd li  img{
+    /*  必须限制  图片变化也限制*/
+    width: 248px;
+    height: 163px;
+}
+
+.recom_bd  i{
+    float: left;
+    width: 1px;
+    height: 140px;
+    background-color: #ddd;
+    /*border-right: 1px solid #ddd;*/
+    margin:12px 0;
+}
+
+
+/* floor*/
+
+.jiadian .box_hd{
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #b3d4fc;
+    border-bottom: 2px solid #b1191a;
+}
+
+
+.jiadian .box_hd h3{
+    float: left;
+
+    text-align: left;
+    /*background-color: darkred;*/
+    color: #c81623;
+    font-size: 18px;
+    font-weight: 400;
+}
+.jiadian .box_hd  .tab_list{
+    float: right;
+    font-size: 12px;
+}
+
+.jiadian .box_hd  .tab_list li{
+    float: left;
+}
+
+.jiadian .box_hd  .tab_list li a{
+    padding: 0 15px;
+}
+
+.box_bd {
+    height: 361px;
+}
+.tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.jiadian .box_bd  .col_210{
+    width: 210px;
+    text-align: center;
+    background-color: #f9f9f9;
+
+}
+
+/* 节能位置*/
+.jiadian .box_bd  .col_210 li{
+    float: left;
+    width: 86px;
+    height: 34px;
+    line-height: 33px;
+    margin-left: 13px;
+    font-size: 12px;
+    border-bottom: 1px solid  #ededed;
+}
+
+.jiadian .box_bd  .col_329 {
+    width: 329px;
+
+}
+
+
+.jiadian .box_bd  .col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.jiadian .box_bd  .col_219 {
+    width: 219px;
+
+}
+
+.bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转为块级元素 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+/* 设定图的size*/
+
+

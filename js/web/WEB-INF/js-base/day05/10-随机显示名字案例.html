@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机显示名字案例</title>
+</head>
+
+<body>
+<script>
+  // 随机显示名字案例： ['赵云',  '黄忠',  '关羽',  '张飞',  '马超']
+  let arr = ['赵云', '黄忠', '关羽', '张飞', '马超']
+  // 1. 利用 Math.random() 随机生成一个 0 ~ 4 的整数，作为数组的索引号
+  let s1= Math.random() * (10 + 1) // 0 ~ 11 [0  11)  ---能取到0，但是取不到1 [0, 1)
+  console.log(s1)
+  let k1=  Math.floor(s1)
+  console.log(k1)
+  console.log(arr[k1])
+
+console.log("-------------------------")
+  let s11= Math.random() * (4 + 1) // 0 ~ 11 [0  5)  ---能取到0，但是取不到5 [0, 1)
+  console.log(s11)
+  let k11=  Math.floor(s11)
+  console.log(k11)
+  console.log(arr[k11])
+
+  // console.log(Math.floor(Math.random() * 数组的长度))
+  // console.log(index)
+
+  // 2. 利用数组[随机数] 显示到页面中
+  // document.write(arr[index])
+</script>
+</body>
+
+</html>

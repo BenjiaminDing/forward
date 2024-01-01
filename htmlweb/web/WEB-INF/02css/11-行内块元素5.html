@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示模式之行内块元素(特殊情况)</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            float: left;
+        }
+        .b1{
+            width: 200px;
+            height: 60px;
+            margin: 10px auto;
+            background-color: #808080;
+            /* 在父级元素使用Lh 对子类 的content 都有效果*/
+            line-height: 20px;
+            font-size: 16px;
+        }
+        li{
+            list-style: none;
+            float: left;
+
+            background-color: yellow;
+        }
+        li a{
+            background-color: red;
+        }
+    /*  高度继承 ，实际垂直剧中 还是 字体当前的盒子  */
+
+    </style>
+</head>
+
+<body>
+
+<div class="b1">
+    <!--    <div></div>-->
+<!--    你好-->
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href="">你们</a></li>
+        <li><a href="">他</a></li>
+    </ul>
+</div>
+
+</body>
+
+</html>

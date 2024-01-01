@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 我们想页面一打开，一个盒子就从左边走到右边 */
+        /* 1. 定义动画 */
+
+        @keyframes move-ben {
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束状态 */
+            100% {
+                transform: translateX(800px);
+            }
+        }
+
+        .b1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2. 调用动画 */
+            /* 动画名称 */
+            animation-name: move-ben;
+            /* 持续时间 */
+            animation-duration: 3s;
+        }
+
+
+
+        /*99999999999       //------------------  过度虚要鼠标----------------------------------9999999999999999*/
+        .b3 {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* transition: 变化的属性 花费时间 运动曲线 何时开始; */
+            /* transition: width .5s ease 0s, height .5s ease 1s;*/
+            /* 如果想要写多个属性，利用逗号进行分割 */
+            /* transition: width .5s, height .5s;*/
+            /* 如果想要多个属性都变化，属性写all就可以了 */
+            /* transition: height .5s ease 1s; */
+            /* 谁做过渡，给谁加 */
+            transition: all 0.5s;
+        }
+        .b2:hover .b3 {
+            /*width: 400px;*/
+            /*height: 200px;*/
+            background-color: skyblue;
+            margin-left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="b1"></div>
+
+    <hr>
+
+<div class="b2">
+    <div CLASS=b3>9999</div>
+</div>
+</body>
+
+</html>

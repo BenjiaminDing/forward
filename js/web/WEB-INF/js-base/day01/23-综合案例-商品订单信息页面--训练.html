@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>综合案例-商品订单信息页面</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    h2{
+
+      margin: 0 auto;
+      text-align: center;
+      font-size: 24px;
+
+    }
+    .order{
+      font-size: 14px;
+      margin: 20px auto;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+      overflow: hidden;
+
+
+
+
+    }
+    .order tr:nth-child(1){
+      background: -webkit-linear-gradient(left,#f46e35,#f058a0);
+    }
+    .order tr:nth-child(2){
+      background: -webkit-linear-gradient(left,#fdf0eb, #fdeff6);
+    }
+
+    .order th{
+      width: 130px;
+      height: 50px;
+      /*background-color: pink;;*/
+
+    }
+    .order td{
+      width: 130px;
+      height: 50px;
+      /*background-color: pink;;*/
+
+    }
+  </style>
+</head>
+
+<body>
+<h2 class="title">订单详情页面</h2>
+
+
+
+
+
+
+<!--<table class="order">
+  <tr>
+    <th>商品名称</th>
+    <th>商品价格</th>
+    <th>商品数量</th>
+    <th>总价</th>
+    <th>收货地址</th>
+  </tr>
+  <tr>
+    <td>小米青春版PLUS</td>
+    <td>99元</td>
+    <td>99</td>
+    <td>999元</td>
+    <td>哈哈</td>
+  </tr>
+</table>-->
+
+
+<!--    所以标签是可以 写人到js里面-->
+<script>
+  // 1. 输入数据
+  let price = prompt('请你输入商品单价:')
+  let num = prompt('请您输入商品数量:')
+  let address = prompt('请您输入收货地址:')
+  // 2. 处理数据
+  console.log(typeof price)
+  let total = price * num  // 计算总价
+  // alert(total)
+
+  // 3. 输出数据
+  document.write(`
+   <table class="order">
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+      <th>总价</th>
+      <th>收货地址</th>
+    </tr>
+    <tr>
+      <td>小米青春版PLUS</td>
+            <td>${price}元</td>
+      <td>${num}</td>
+      <td>${total}元</td>
+      <td>${address}</td>
+    </tr>
+  </table>
+  `)
+
+</script>
+
+</body>
+
+</html>

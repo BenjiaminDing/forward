@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>精灵动画</title>
+  <style>
+    .box {
+      position: absolute;
+      left: 0;
+      width: 140px;
+      height: 140px;
+      background-image: url(./media/bg.png);
+      animation: run 3s steps(12) infinite,/*  处理背景图的运动*/
+      translate 3s linear  forwards ;/*  处理 当前框 div的移动  infinite backwards*/
+    }
+
+    @keyframes run {
+      100% {
+        background-position: -1680px 0;
+      }
+    }
+
+    @keyframes translate {
+      100% {
+        left: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

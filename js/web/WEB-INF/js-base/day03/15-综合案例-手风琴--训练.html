@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 1120px;
+            height: 260px;
+            display: flex;
+            overflow: hidden;
+            background-color: #f0ad4e;
+        }
+        .box div{
+            width: 120px;
+            transition: all 1s;
+            background-color: #b3d4fc;
+            /*overflow: hidden;*/
+        }
+        .box div:hover{
+            width: 400px;
+
+        }
+
+        .box div:nth-child(6):hover{
+            opacity: .3;
+        }
+        /*.box div:last-child:hover{*/
+        /*    !*width: 500px;*!*/
+        /*    !*background-color: red;*!*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<!--<div class="box">-->
+<!--    <div><img src="./images/1.jpg" alt=""></div>-->
+<!--    <div><img src="./images/2.jpg" alt=""></div>-->
+<!--    <div><img src="./images/3.jpg" alt=""></div>-->
+<!--    <div><img src="./images/4.jpg" alt=""></div>-->
+<!--    <div><img src="./images/5.jpg" alt=""></div>-->
+<!--    <div><img src="./images/6.jpg" alt=""></div>-->
+<!--    <div><img src="./images/7.jpg" alt=""></div>-->
+<!--</div>-->
+
+
+<script>
+    let arr = [
+        './images/1.jpg',
+        './images/2.jpg',
+        './images/3.jpg',
+        './images/4.jpg',
+        './images/5.jpg',
+        './images/6.jpg',
+        './images/7.jpg',
+    ]
+
+    // 1. 声明一个空的字符串变量 str
+    let str = ''
+
+    // 2. 利用for循环拼接字符串 +=
+    for (let i = 0; i < arr.length; i++) {
+        // console.log(arr[i])
+        // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_literals    反引号
+        str =str+ `
+                 <div><img src='${arr[i]}' alt=""></div>
+                  `
+    }
+    console.log(str)
+
+    // 3. 把拼接的字符串放入 box盒子里面
+    document.write(`
+      <div class="box">
+        ${str}
+      </div>
+    `)
+
+
+</script>
+</body>
+
+</html>

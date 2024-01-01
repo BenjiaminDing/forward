@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin负值的巧妙运用</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            float: left;
+            display: inline-block;
+            width: 50px;
+            height: 150px;
+            border: 1px solid #a5a5a5;
+            background-color: red;
+        }
+        ul{
+            display: inline-block;
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            border: 5px solid #aa600b;
+            /* 重合边线*/
+            margin-left: -5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div>uuuu</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+
+</html>

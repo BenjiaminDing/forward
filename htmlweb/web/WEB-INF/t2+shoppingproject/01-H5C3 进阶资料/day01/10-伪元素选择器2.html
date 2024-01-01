@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素选择器before和after</title>
+    <style>
+
+
+        div {
+            box-sizing: border-box;
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+
+            padding: 50px 60px;
+            font-size: 12px;
+            line-height:  100px;
+            text-align: center;
+
+        }
+
+        /*
+        - before 和 after 创建一个元素，但是属于行内元素
+- 新创建的这个元素在文档树中是找不到的，所以我们称为伪元素
+- 语法：  element::before {}
+- before 和 after 必须有 content 属性
+- before 在父元素内容的前面创建元素，after 在父元素内容   的后面插入元素
+  伪元素选择器和标签选择器一样，权重为 1
+
+
+
+
+
+
+
+        伪元素是行内元素  没有宽高 ，不过可以调整字体大小   就是标签  ，权重是 1*/
+        /* div::before 权重是2 */
+        div::before {
+            /* 这个content是必须要写的 */
+            content: '我';
+            background-color: purple;
+        }
+        div::after {
+            content: '小猪佩奇';
+            display: inline-block;
+            /*width: 30px;*/
+            /*height: 40px;*/
+            background-color: purple;
+
+
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    是
+</div>
+</body>
+</html>

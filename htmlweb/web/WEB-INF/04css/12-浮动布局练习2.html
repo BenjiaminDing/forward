@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动元素搭配标准流父盒子2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav{
+            width: 1226px;
+            margin: 0 auto;
+        }
+
+        .box {
+            /*width: 1226px;*/
+            width: 1240px;
+            height: 285px;
+            background-color: pink;
+
+        }
+
+        .box li {
+            width: 296px;
+            height: 285px;
+            background-color: purple;
+            float: left;
+            margin-right: 14px;
+        }
+
+        /* 这里必须写 .box .last 要注意权重的问题  20 */
+        /*.box .last {*/
+        /*    margin-right: 0;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+
+<div class="nav">
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+</div>
+
+<hr>
+<hr>
+<h3>-------------------下面就可以说明ul可以比div这个父级大一些,将ul的背景色去掉， 使用者是看不到 ul大出一部分的， 父类nav右边放东西 也不会受到影响------------------------------------</h3>
+<h3>-----------------------是由一点需要注意 浮动的盒子可以对同级的 或者父级使用         margin-right: --------------------------------</h3>
+
+<img src="fs.png" alt="">
+</body>
+
+</html>

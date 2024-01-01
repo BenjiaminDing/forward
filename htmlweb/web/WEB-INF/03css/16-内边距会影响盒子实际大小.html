@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内边距会影响盒子实际大小</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid pink ;
+            padding: 10px;
+        }
+        .box2{
+            /* 外层div盒子设置宽高 ，再添加内边距不会撑大盒子*/
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000 ;
+
+        }
+        p{
+            /* 下面是p添加内边距 不会撑大外部盒子大小，
+            高度 内部 元素没有给高度 也会被影响
+            高度 内部   padding修改  也会被影响
+            */
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    padding会影响盒子实际大小padding会影响盒子实际大小
+</div>
+<div class="box2">
+    <p>padding会影响盒子实际大小padding会影响盒子实际大小</p>
+</div>
+
+<hr>
+<div  >
+    <div>测试切换模式</div>
+</div>
+
+</body>
+</html>

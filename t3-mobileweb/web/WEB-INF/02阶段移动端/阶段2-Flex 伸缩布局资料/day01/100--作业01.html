@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+            /*min-width: 640px;*/
+        }
+        li{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+
+        header ul{
+            width: 100%;
+        }
+        header li{
+
+            float: left;
+            width: 33.33%;
+            height: 40px;
+
+
+            background-color: #FFFFFF;
+            position: relative;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+
+
+        }
+        /*  伪元素属于行内元素*/
+        header li:nth-child(1)::after, header li:nth-child(2)::after{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            right: 0;
+            content: '';
+            width: 1px;
+            height: 16px;
+            background-color: #CCC;
+            margin-top: 12px;
+            /*z-index: 2;*/
+        }
+
+        /*  伪元素属于行内元素*/
+        header li:nth-child(1) span{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            height: 100%;
+            width: 85%;
+            border-bottom: 1px solid #6DC19B;
+        }
+
+
+
+        header li:last-child::after{
+            position: absolute;
+            display: inline-block;
+            right: 8px;
+            top: 8px;
+            content: '';
+            width: 25px;
+            height: 25px;
+            background: url("./search.png") no-repeat;
+            background-size: 25px 25px;
+
+        }
+        footer{
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+            background-color: #fff;
+        }
+        footer ul {
+            width: 100%;
+        }
+        footer ul li{
+            float: left;
+            height: 78px;
+            width: 25%;
+            /*background-color: #b3d4fc;*/
+
+            position: relative;
+        }
+
+        /*绝对定位属性 是行内快？？*/
+        footer ul li img{
+            position: absolute;
+            top:12px;
+            left: 50%;
+            transform:translateX(-50%) translateY(0) ;
+        }
+        footer ul li span{
+            position: absolute;
+            top:48px;
+            left: 50%;
+            transform:translateX(-50%) translateY(0) ;
+        }
+
+
+        nav{
+            margin-top: 40px;
+            margin-bottom: 20px;
+
+        }
+
+        nav a{
+            display: block;
+            width: 100%;
+        }
+        nav a img{
+            width: 100%;
+            /*width: 320px;*/
+            /*height: 152px;*/
+        }
+
+
+        /*    999*/
+        section ul li{
+            width: 100%;
+            /*background-color: #b3d4fc;*/
+        }
+        section ul li h3{
+            text-indent: 1em;
+
+
+        }
+
+        section ul li .role{
+
+            overflow: hidden;
+            font-size: 12px;
+            margin: 5px  0  5px 5px;
+            color: #b2b2b2;
+        }
+        section ul li .role>i{
+            float: left;
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            margin: 0 10px;
+            background-color: #ccc;
+        }
+        section ul li .role>div{
+            float: left;
+        }
+
+        /*9999999*/
+        section ul li .answer a{
+            float: left;
+            /*display: block;*/
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: red;
+
+           margin: 20px 30px 20px 20px;
+        }
+
+        section ul li .answer .answerVoice{
+            float: left;
+        }
+
+        section ul li .answer .countLister{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <ul>
+        <li>问题提 <span></span></li>
+        <li>才华提</li>
+        <li>新进提</li>
+    </ul>
+</header>
+
+<nav>
+    <a href="#"> <img src="./images/banner3x.png" alt=""></a>
+</nav>
+
+<section>
+    <ul>
+        <li>
+            <h3>如何学习语文的文言文内容,快速提高语文成绩？</h3>
+            <div  class="role">
+                <div class="name">王者大</div>  <i></i>
+                <div class="teacher">英语文学老师</div>
+            </div>
+                        <div class="answer">
+                          <a href=""><img src="./images/headrole.png" alt=""></a>
+                            <div class="answerVoice"><img src="./images/msg.png" alt=""></div>
+                            <div class="countLister">22人听过</div>
+                        </div>
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+<footer>
+    <ul>
+        <li>
+            <img src="./images/pic1.jpg" alt="">
+            <span>榜单</span>
+        </li>
+        <li style="color: #ff6f00">
+            <img src="./images/pic2.jpg" alt="">
+            <span>榜单</span>
+        </li>
+        <li style="color: #ffff00">
+            <img src="./images/pic3.jpg" alt="">
+            <span>榜单</span>
+        </li>
+        <li>
+            <img src="./images/pic4.jpg" alt="">
+            <span>榜单</span>
+        </li>
+    </ul>
+</footer>
+
+
+</body>
+
+</html>

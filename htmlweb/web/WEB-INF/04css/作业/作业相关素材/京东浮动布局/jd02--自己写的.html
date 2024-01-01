@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东浮动布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            /* 30*/
+            width: 1214px;
+            height: 460px;
+            background-color: #ccc;
+
+            margin: 200px auto;
+            /*77777777777777777777  解决外边距 塌陷问题 */
+            /*overflow:hidden*/
+            /*    or 设置父类上内边距padding*/
+            /*    padding-top: 10px;*/
+            /*<font color="red">浮动 和固定定位，绝对定位的元素。不会发生外边距塌陷问题</font>*/
+        }
+        .sh1,
+        .sh2,
+        .sh3{
+            width: 350px;
+            height: 390px;
+            background-color: pink;
+            /*<font color="red">浮动 和固定定位，绝对定位的元素。不会发生外边距塌陷问题</font>*/
+            float: left;
+        }
+
+        /* 下面解决 sh1 sh2 sh3 位置问题 由于间距不一样使用不能统一使用 类似 margin-left 20px*/
+        .sh1{
+            margin:35px 50px 35px 32px;
+
+        }
+        .sh2{
+            margin:35px auto;
+
+        }
+        .sh3{
+            margin:35px 32px 35px 50px;
+
+        }
+        /*sh1 ul li ==350宽度 ，  由于li每个元素 使用左浮动 ，并且右边距10px 170+10+170+10=360大于350 ，
+        所以 可以把ul宽度定为360 ， 这样也不会影响 sh1大小和位置*/
+        ul li{
+            width: 170px;
+            height: 190px;
+            background-color: #808080;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul{
+            width: 360px;
+            height: 390px;
+        }
+        /* 去除li 里面黑点*/
+        ul li{
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+<!--  28px  50px  32px-->
+<div class="main">
+
+    <div class="sh1">
+        <ul>
+            <li><img src="京东图片素材/left01.png" alt=""></li>
+            <li><img src="京东图片素材/left02.png" alt=""></li>
+            <li><img src="京东图片素材/left03.png" alt=""></li>
+            <li><img src="京东图片素材/left04.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="sh2"><a href="#"><img src="京东图片素材/center.png" alt=""></a></div>
+    <div class="sh3 ">
+        <ul>
+            <li><img src="京东图片素材/right02.png" alt=""></li>
+            <li><img src="京东图片素材/right01.png" alt=""></li>
+            <li><img src="京东图片素材/right03.png" alt=""></li>
+            <li><img src="京东图片素材/right04.png" alt=""></li>
+        </ul>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+

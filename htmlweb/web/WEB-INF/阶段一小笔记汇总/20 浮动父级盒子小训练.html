@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动父级盒子小，子级大的测试</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            /* css3*/
+            box-sizing: border-box;
+        }
+        .navBar{
+            width: 1200px;
+            /*height: 10px;*/
+            margin: 0 auto;
+            background-color: red;
+            font-size: 12px;
+
+            /*overflow: hidden;*/
+        }
+
+        ul{
+            float: right;
+            background-color: #f1f1f1;
+            height: 32px;
+            line-height: 32px;
+        }
+
+        li{
+            float:left ;
+            list-style: none;
+            border-right: 1px solid #666666;
+            padding: 0 15px;
+            background-color: yellowgreen;
+        }
+    </style>
+
+</head>
+<body>
+<p>
+<div class="navBar">
+    <ul>
+        <li>你好你</li>
+        <li>你好</li>
+        <li>你好</li>
+        <li>你好你好</li>
+        <li>你好</li>
+        <li>你好你好吧</li>
+
+    </ul>
+</div>
+
+</p>
+
+</body>
+</html>

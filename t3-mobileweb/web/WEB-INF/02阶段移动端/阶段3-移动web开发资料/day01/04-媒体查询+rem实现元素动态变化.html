@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+/*        html {
+         font-size: 12px;//变化 750/50=15px/rem    若一个盒子150px宽  在750pxscreen  显示 150px/(15px/rem)=10rem
+        font-size: 12px;//变化 360/50=7.2px/rem    屏幕缩小到    360pxscreen  显示 X1 px/(7.2px/rem)=10rem  ,所以X1=72px
+        }*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* html {
+            font-size: 100px;
+        } */
+        /* 从小到大的顺序 */
+
+        @media screen and (min-width: 360px) {
+            html {
+                font-size: 7.2px;
+            /*    7.2px/rem*/
+            }
+        }
+
+
+        @media screen and (min-width: 750px) {
+            html {
+                font-size: 15px;
+            /*    15px/rem*/
+            }
+        }
+
+        .top {
+            height: 10rem;
+            width: 10rem;
+            /*font-size: .5rem;*/
+            background-color: green;
+            /*color: #fff;*/
+            /*text-align: center;*/
+            /*line-height: 1rem;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">购物车</div>
+</body>
+
+</html>

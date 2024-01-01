@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0c143d;
+        }
+        h3{
+            text-align: center;
+            margin-top: 50px;
+            color: #9799ab;;
+        }
+        .box{
+            /*background-color: #f0ad4e;*/
+            width: 800px;
+            min-height: 300px;
+            margin: 0px auto;
+            padding-top: 50px;
+
+            /**/
+            display:flex;
+            justify-content:space-around;
+            align-items: flex-end;
+            border-bottom:1px solid #fff;
+            border-left:1px solid #fff;
+
+
+        }
+        .box div{
+            /*background-color: deepskyblue;*/
+            background: linear-gradient(#3c99ff, #4489d0, #2283e4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: #9799ab;;
+            border-radius: 5px 5px 0 0;
+
+            /* 处理下面的竖线 |*/
+            position: relative;
+        }
+
+
+        .box div span{
+            /*width: 60px;*/
+            margin: -22px 0 0px 0px;
+
+        }
+
+        .box div h4{
+            /*width: 70px;*/
+            margin: 0px 0 -35px 0px;
+
+        }
+
+        .box>div::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            height: 10px;
+            background-color: #4b578f;
+            transform: translate(-50%, 100%);
+        }
+        /*//-----------------------------------  动画  -----------------*/
+
+        .box>div:hover {
+
+            animation: bgxxx 1s alternate infinite;
+
+        }
+
+        @keyframes bgxxx {
+            to {
+                /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+                box-shadow: 0 5px 29px rgba(53, 111, 226,0.88);
+                background: linear-gradient(#3c99ff, #68aff6, #2283e4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<h3 class="title">2099年季度销售数额（单位万）</h3>
+<!--<div class="box">
+    <div style="height: 123px;" title="第1季度-123万">
+        <span>123万</span>
+        <h4>第1季度</h4>
+    </div>
+    <div style="height: 156px;" title="第2季度-156万">
+        <span>156万</span>
+        <h4>第2季度</h4>
+    </div>
+    <div style="height: 120px;" title="第3季度-120万">
+        <span>120万</span>
+        <h4>第3季度</h4>
+    </div>
+    <div style="height: 210px;" title="第4季度-210万">
+        <span>210万</span>
+        <h4>第4季度</h4>
+    </div>
+</div>-->
+<script>
+    let str='';
+    let a=+prompt('输入')
+    let b=+prompt('输入')
+    let c=+prompt('输入')
+    let d=+prompt('输入')
+
+    let arrobj=[a,b,c,d,];
+    //  处理str拼接
+    for (let i = 0; i <arrobj.length ; i++) {
+        str=str+`
+           <div style="height: ${arrobj[i]}px;" title="第${i+1}季度-${arrobj[i]}万">
+           <span>${arrobj[i]}万</span>
+           <h4>第${i+1}季度</h4>
+           </div>
+           `
+
+    }
+    console.log(str)
+    document.write(`<div class="box">
+                     ${str}
+                     </div>
+                    ` )
+
+</script>
+
+
+
+
+</body>
+
+</html>

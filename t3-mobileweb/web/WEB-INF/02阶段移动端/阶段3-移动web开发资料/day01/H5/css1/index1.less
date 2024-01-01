@@ -1,0 +1,128 @@
+// 首页样式css
+@import "common1";
+
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height:1.5;
+  font-family: Arial,Helvetica;
+  background-color:#F2F2F2;
+}
+
+@baseFont: 50;
+.search-content{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: (88rem / @baseFont);  // 理解为88px/(50px/rem)==1.6rem
+  background-color: #FFC001;
+
+  // position: relative;
+  display: flex;
+  // 子类
+  .classify{
+
+    width: (44rem/@baseFont);
+    height: (70rem/@baseFont);
+    margin: 11rem ./ @baseFont 25rem ./ @baseFont 7rem ./ @baseFont 24rem ./ @baseFont;
+    background: url("../images/classify.png") no-repeat;
+    background-size: (44rem/@baseFont) (70rem/@baseFont);
+  }
+  .search{
+    flex: 1;
+    width: 100%;
+    //line-height: (88rem / @baseFont);
+    input{
+      border: none;
+      outline: none;//去打掉input内部点击的框
+      width: 100%;
+      line-height: 66rem./@baseFont;
+      //height: 66rem./@baseFont;
+      margin-top: 11rem./@baseFont;
+      padding: 1px./@baseFont 2rem./@baseFont 1rem./@baseFont 55rem./@baseFont;
+      font-size: (25rem/@baseFont);
+      border-radius: 33rem./@baseFont;
+      background-color:#FFF2CC;
+      color: #757575;
+      //// 88 66  11px
+
+    }
+  }
+  .login{
+    width: (75rem/@baseFont);
+    height: (70rem/@baseFont);
+    line-height: 70rem./@baseFont;
+    margin: 10rem./@baseFont;
+
+    font-size:25rem./@baseFont;
+    text-align: center;
+    color: #fff;
+
+  }
+}
+.banner{
+  width: (750rem/@baseFont);
+  height: (368rem/@baseFont);
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.ad{
+  //width: (750rem/@baseFont);
+  //height: (200rem/@baseFont);
+  //width: 100%;
+  display: flex;
+  a{
+    flex: 1;
+  }
+  img{
+    width: 100%;
+    //width: (250rem/@baseFont);
+    //height: (200rem/@baseFont);
+  }
+}
+// nav
+nav {
+  width: 750rem / @baseFont;
+  a {
+    float: left;
+    width: 150rem ./ @baseFont;
+    height: 140rem ./ @baseFont;
+    text-align: center;
+    img {
+      display: block;
+      width: 82rem ./ @baseFont;
+      height: 82rem ./ @baseFont;
+      margin: 10rem ./ @baseFont auto 0;
+    }
+    span {
+      font-size: 25rem ./ @baseFont;
+      color: #333;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//750/50px/rem=15rem         75 70
+// rem 总结
+//
+///        html {
+//  font-size: 12px;//变化 750/50=15px/rem   --a   若一个盒子150px宽  在750pxscreen  显示 150px/(15px/rem)=10rem
+//  font-size: 12px;//变化 360/50=7.2px/rem    屏幕缩小到    360pxscreen  显示 X1 px/(7.2px/rem)=10rem  ,所以X1=72px
+//}　　２３４　ＲＴＲＴＴＲＥＲＲ　ＦＦｊｊｊｆｇｇｇｇｇｇ５６
+
+// (实际宽度如 150px盒子)/(选一个标准media750/50)=(10rem)   a/b=c   b就几个档次 由媒体获取   c固定的， 所以 a跟随 b的变化变化 a=b*c

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    /*background-color: red;*/
+    /*height: 10px;*/
+}
+
+.header  {
+    /* 原本head 100*/
+    /*height: 100px;*/
+    /*margin-top: 30px;*/
+    height: 70px;
+    padding-top: 30px;
+    background-color: #ccc;
+}
+/*  30 30 42*/
+.header .logo {
+    float: left;
+    width: 195px;
+    height: 42px;
+    /*background-color: yellowgreen;*/
+}
+/* 237 9  9*/
+.header .nav {
+    float: left;
+    width: 253px;
+    height: 40px;
+    margin-left: 70px;
+    /*background-color: purple;*/
+}
+
+/* 44 -8  8  =28*/
+.header .nav  ul{
+    width: 270px;
+}
+li{ list-style: none}
+.header .nav  li a {
+    display: block;
+    float: left;
+
+    text-decoration: none;
+
+    margin-right: 28px;
+    /*background-color: orange;*/
+    padding: 0 7px;
+    line-height:40px ;
+    font-size: 18px;
+    color: #050505;
+
+}
+.header .nav  li a:hover {
+    border-bottom: 2px solid #00a4ff;
+
+}
+.header .search{
+
+    float: left;
+    /*  边线 2px*/
+    /*  410  50 */
+    width: 412px;
+    height: 42px;
+
+    margin-left: 87px;
+    /*border: 1px solid #00a4ff;*/
+    /*background-color: yellowgreen;*/
+}
+.header .search input{
+
+    float: left;
+    width: 339px;
+    height: 40px;
+    padding-left: 21px;
+    /*line-height: 40px;*/
+    border: 1px solid #00a4ff;
+    border-right: none ;
+    /*    去掉点击input 内侧黑色边框*/
+    outline: none;
+    font-size: 14px;
+    color: #bfbfbf;
+
+}
+
+.header .search button{
+    float: left;
+
+    width: 50px;
+    height: 42px;
+    background-color: #00a4ff;
+    border: none;
+
+    background-image: url(./images/btn.png);
+    background-position: left center;
+}
+.header .user{
+
+    float: right;
+    width: 153px;
+    height: 42px;
+
+    /*background-color: springgreen;*/
+}
+.header .user img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+
+}
+.header .user span{
+    float: left;
+    font-size: 14px;
+    line-height:42px ;
+    margin-left: 4px;
+    color: #666666;
+}
+
+.dj {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+}
+
+
+
+

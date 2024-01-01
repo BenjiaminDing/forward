@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            /* css3*/
+            box-sizing: border-box;
+        }
+      li{
+          list-style: none;
+      }
+      a{
+          text-decoration: none;
+          color: #666666;
+      }
+
+        ul{
+            width: 230px;
+                /*background-color: #b3d4fc;*/
+            margin: 50px auto;
+        }
+
+      .news  a{
+            display: block;
+            /*display: inline-block;*/
+            height: 30px;
+            background-color: #b3d4fc;
+            /* 1.这个单词的意思是如果文字显示不开也必须强制一行内显示 */
+            white-space: nowrap;
+
+            /* 2.溢出的部分隐藏起来 */
+            overflow: hidden;
+            /* 3. 文字溢出的时候用省略号来显示 */
+            text-overflow: ellipsis;
+        }
+
+        .news2  li{
+
+            height: 30px;
+            background-color: #b3d4fc;
+            /* 1.这个单词的意思是如果文字显示不开也必须强制一行内显示 */
+            white-space: nowrap;
+
+            /* 2.溢出的部分隐藏起来 */
+            overflow: hidden;
+            /* 3. 文字溢出的时候用省略号来显示 */
+            text-overflow: ellipsis;
+        }
+    </style>
+
+</head>
+<body>
+<div class="news">
+    <ul>
+        <li><a href="#"> 它来了它来了，pink老师走来了, 它是谁？</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#">它来了它来了，pink老师走来了, 它是谁？</a></li>
+    </ul>
+</div>
+
+
+<hr>
+
+
+<div class="news2">
+    <ul>
+        <li><a href="#"> 它来了它来了，pink老师走来了, 它是谁？</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#"> 它来了它来了，pink老师走来了</a></li>
+        <li><a href="#">它来了它来了，pink老师走来了, 它是谁？</a></li>
+    </ul>
+</div>
+</body>
+</html>

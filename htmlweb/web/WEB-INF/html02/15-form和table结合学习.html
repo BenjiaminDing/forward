@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>综合案例-注册页面</title>
+</head>
+<body>
+    <h4>form和table结合学习</h4>
+    <form enctype="multipart/form-data" action="v1/login" method="post">
+        <!-- 可省为<form method="post"> -->
+
+<!--
+
+application/x-www-form-urlencoded
+在发送前编码所有字符（默认为此方式）；
+multipart/form-data
+不进行字符编码。使用包含文件上传控件的表单时，必须使用该值
+text/plain
+-->
+
+
+<!--
+
+get 与 post 的区别（具体不同可有上例实验） 　　
+1，数据的查询：比如浏览论坛时，URL一般包含了分类、页码数、每页记录数等信息。 get方式，能一目了然的看到所要查询的信息(条件)。
+ post 因为隐藏掉了这些信息，不方便进行检验查询条件。
+2，敏感数据的提交(安全性)：对一项记录，进行更改、添加操作时，比如注册用户、更改用户资料等。get方式附加在URL上，会泄露掉敏感的消息。post 方式，
+能隐藏掉敏感的信息。 　　
+3，大数据文本传递：get虽然方便查询，但由于是附加在URL上，各浏览器对URL也有个长度限制。
+IE ：2048字符。Chrome、FF 好像是8182字符。post 好像没此限制。
+
+-->
+        <table>
+            <tr>
+                <td><label for="name">账号：</label></td>
+                <td><input type="text" id="name" name="username"/></td>
+            </tr>
+            <tr>
+                <td><label for="pswd">密码：</label></td>
+                <td><input type="password" id="pswd" name="pswd"/></td>
+            </tr>
+            <tr>
+                <td><input type="reset"/></td>
+                <td><input type="submit"/></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

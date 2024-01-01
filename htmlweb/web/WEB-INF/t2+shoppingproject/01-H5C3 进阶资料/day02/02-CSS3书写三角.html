@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #000;
+        }
+        /*  01 首先- before 和 after 创建一个元素，但是属于行内元素
+
+        02 对行内元素使用 定位后 元素具有行内块属性
+        */
+
+
+        div::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: 15px;
+
+            /* 使用了绝对定位 才能设置宽高 */
+            width: 10px;
+            height: 10px;
+            background-color: #b3d4fc;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            /* 配合下面hover使用*/
+            transition: all 0.2s;
+        }
+        /* 鼠标经过div  里面的三角旋转  180+45*/
+
+        div:hover::after {
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+
+<body>
+<div></div>
+</body>
+
+</html>

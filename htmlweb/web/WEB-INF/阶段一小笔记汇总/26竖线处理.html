@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        *{  padding: 0;
+            margin: 0;
+            box-sizing: border-box;}
+
+        li{
+            list-style: none;
+        }
+        /* 快捷导航模块 */
+        .shortcut {
+            height: 31px;
+            line-height: 31px;
+            background-color: #CCC;
+        }
+
+        /*.shortcut ul  {*/
+        /*    height: 10px;*/
+        /*    background-color: red;*/
+        /*}*/
+        .shortcut ul li {
+            float: left;
+            /*background-color: lightgoldenrodyellow;*/
+        }
+
+        /* 选择所有的偶数的小li   右侧竖线*/
+        .shortcut .fr ul li:nth-child(even) {
+            width: 1px;
+            height: 12px;
+            background-color: #666;
+            margin: 9px 15px 0;
+        }
+
+        /*//----------------------------------------------------*/
+
+        .shortcut2 {
+            height: 31px;
+            line-height: 31px;
+            /*background-color: #f1f1f1;*/
+            background-color: #CCC;
+        }
+
+
+        .shortcut2 ul li {
+            float: left;
+            /*background-color: #0077aa;*/
+        }
+
+
+
+        .shortcut2 ul li::after {
+            content: '';
+            display: inline-block;
+            float: right;
+            width: 1px;
+            height: 12px;
+            background-color: #f0ad4e;
+            margin: 9px 15px 0;
+        }
+        /*//----------------------------------------------------*/
+
+        .shortcut3 {
+            height: 31px;
+            line-height: 31px;
+            background-color: #CCC;
+            /*background-color: #f1f1f1;*/
+        }
+
+
+        .shortcut3 ul li {
+            float: left;
+            border-right: 1px solid #9a6e3a;
+            padding: 0 15px;
+                /*background-color: #0077aa;*/
+        }
+
+        .shortcut3 ul li:nth-child(1) {
+            padding-left: 0;
+        }
+
+        /*.shortcut3 ul li::after {*/
+        /*    content: '';*/
+        /*    display: inline-block;*/
+        /*    float: right;*/
+        /*    width: 1px;*/
+        /*    height: 12px;*/
+        /*    background-color: #f0ad4e;*/
+        /*    margin: 9px 15px 0;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+
+<div class="shortcut">
+    <div class="fr">
+        <ul>
+            <li>我的订单</li>
+            <li></li>
+            <li class="arrow-icon">我的品优购</li>
+            <li></li>
+            <li>品优购会员</li>
+            <li></li>
+            <li>企业采购</li>
+            <li></li>
+            <li class="arrow-icon">关注品优购</li>
+            <li></li>
+            <li class="arrow-icon">客户服务</li>
+            <li></li>
+            <li class="arrow-icon">网站导航</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<hr>
+<p>----------------------伪元素处理---------------------------</p>
+
+<div class="shortcut2">
+    <div class="fr">
+        <ul>
+            <li>我的订单</li>
+            <li class="arrow-icon">我的品优购</li>
+            <li>品优购会员</li>
+            <li>企业采购</li>
+            <li class="arrow-icon">关注品优购</li>
+            <li class="arrow-icon">客户服务</li>
+            <li class="arrow-icon">网站导航</li>
+        </ul>
+    </div>
+</div>
+
+<p>---------------------边线border---------------------------</p>
+
+<div class="shortcut3">
+    <div class="fr">
+        <ul>
+            <li>我的订单</li>
+            <li class="arrow-icon">我的品优购</li>
+            <li>品优购会员</li>
+            <li>企业采购</li>
+            <li class="arrow-icon">关注品优购</li>
+            <li class="arrow-icon">客户服务</li>
+            <li class="arrow-icon">网站导航</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

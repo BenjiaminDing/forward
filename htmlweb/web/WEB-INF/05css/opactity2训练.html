@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .b1{
+            width: 200px;
+            height: 200px;
+            /*  RGBA 颜色值是带有 Alpha 通道的 RGB 颜色值的扩展-指定颜色的不透明度。*/
+            /*
+              background-color: rgba(255,0,0,0.6);  可以用bgc和opactity替代
+
+              当 opacity 属性的值应用于某个元素上时，是把这个元素（包括它的内容）当成一个整体看待，
+              即使这个值没有被子元素继承。因此，一个元素和它包含的子元素都会具有和元素背景相同的透明度，
+              哪怕这个元素和它的子元素有不同的 opacity 属性值。
+             */
+            background: red;
+            opacity: 0;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .b1:hover {
+            opacity: 1;
+        }
+
+        /* opactity有继承行*/
+        /*.b1:hover img{*/
+        /*    opacity: 1;*/
+        /*}*/
+
+        .b2{
+            width: 200px;
+            height: 200px;
+            /*  RGBA 颜色值是带有 Alpha 通道的 RGB 颜色值的扩展-指定颜色的不透明度。*/
+            /*
+              background-color: rgba(255,0,0,0.6);  可以用bgc和opactity替代
+             */
+            background: rgba(255, 0, 0, 1) url("./images/banner2.png") no-repeat center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="b1"><img src="images/banner2.png" alt=""></div>
+
+<hr>
+<div class="b2">99</div>
+
+</body>
+</html>

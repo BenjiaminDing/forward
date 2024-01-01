@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>求数组和案例</title>
+</head>
+
+<body>
+  <script>
+    // 求数组和案例：
+    // 1. 封装一个求和函数，参数传递的是数组
+  function sumx(arr = []) {
+
+      let sum = 0
+      // 2. 函数内部遍历数组求和，并且返回 return
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+      }
+      return sum
+    }
+
+
+    // 调用方法
+let ress1=sumx([1, 2, 3])
+    console.log(ress1)
+    console.log(sumx([1, 2, 3, 4]))
+    console.log(sumx())
+  </script>
+</body>
+
+</html>

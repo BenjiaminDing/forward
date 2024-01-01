@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../normalize.css">
+    <style>
+
+        .f  {
+            width: 500px;
+            height: 400px;
+            background-color: #ccc;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;         /* 主轴盒子平均分  */
+
+        /*   多行  如果这是使用主轴  均匀 ， 出现 2行，  实际上横向还是6个 */
+            align-content: space-around;
+        }
+        .f .boy{
+            width: 150px;
+            height: 150px;
+            background-color: #f0ad4e;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="f">
+    <div class="boy">fuxk</div>
+    <div class="boy">ben</div>
+    <div class="boy">tony</div>
+    <div class="boy">tony</div>
+    <div class="boy">tony</div>
+    <div class="boy">tony</div>
+</div>
+</body>
+
+</html>

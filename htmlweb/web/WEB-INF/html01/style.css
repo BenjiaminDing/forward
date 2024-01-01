@@ -1,0 +1,9 @@
+.btn{
+    width: 30px;
+    height: 120px;
+    position: fixed;
+    bottom: 20px;
+    background-color: yellow;
+    left: 90%;
+
+}

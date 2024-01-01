@@ -1,0 +1,6 @@
+1. 使用 CRA 快速创建 React 项目
+npx create-react-app react-redux
+2. 安装配套工具
+npm i @reduxjs/toolkit react-redux
+3. 启动项目
+npm run

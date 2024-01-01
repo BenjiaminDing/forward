@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位水平垂直居中</title>
+    <style>
+        .ff {
+            position: relative;
+
+            margin:  100px auto;
+
+            width: 500px;
+            height: 500px;
+            background-color: #a5a5a5;
+
+        }
+
+        .son{
+
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            /*01 上边*/
+            /*left: 50%;*/
+            /*margin-left: -50px;*/
+
+            /*02 左边*/
+            /*bottom: 50%;*/
+            /*margin-bottom: -50px;*/
+            /*03 右边*/
+            /*top: 50%;*/
+            /*margin-top: -50px;*/
+            /*left:80% ;*/
+
+            /*  04下边*/
+            top: 80%;
+            left:50% ;
+            margin-left: -50px;
+
+
+            background-color: pink;
+            /* margin: auto; */
+        }
+    </style>
+</head>
+<body>
+<div class="ff">
+    <div class="son"></div>
+
+</div>
+</body>
+</html>

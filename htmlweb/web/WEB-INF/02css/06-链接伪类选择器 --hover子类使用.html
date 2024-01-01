@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+
+        /*CSS*/
+        .div1 {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: pink;
+            left: 100px;
+        }
+
+
+        /*  这样鼠标放到 父类范围 后  上面一行字体  就变色*/
+        .div1:hover span {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <span>测试文字</span>
+    <!--    <br>-->
+    <div>你的hi</div>
+</div>
+
+</body>
+
+</html>

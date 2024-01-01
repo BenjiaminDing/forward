@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动元素搭配标准流父盒子2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+         height: 300px;
+        }
+     h3 {
+         width: 100px;
+         height: 100px;
+         float: left;
+     }
+     .box{
+         width: 200px;
+         height: 200px;
+         background-color:pink;
+         /*float: left;*/
+     }
+
+     .nav div{
+         width: 200px;
+         height: 200px;
+         background-color:yellowgreen;
+         float: left;
+     }
+        /*一个盒子里面有多个子盒子，如果其中一个盒子浮动了，其他兄弟也应该浮动，以防止引起问题。*/
+    </style>
+</head>
+
+<body>
+
+<div class="nav">
+
+    <h3>999999</h3>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+
+    <div>66666666</div>
+</div>
+
+
+
+</html>

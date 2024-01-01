@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 12px;//变化 750/50=15px/rem    若一个盒子150px宽  在750pxscreen  显示 150px/(15px/rem)=10rem
+            font-size: 12px;//变化 360/50=7.2px/rem    屏幕缩小到    360pxscreen  显示 X1 px/(7.2px/rem)=10rem  ,所以X1=72px
+        }
+
+        div {
+            font-size: 12px;
+            width: 15rem;//  180
+            height: 15rem;
+            background-color: purple;
+        }
+
+        p {
+            /* 1. em相对于父元素 的字体大小来说的 */
+            /* width: 10em;
+            height: 10em; */
+            /* 2. rem 相对于 html元素 字体大小来说的 */
+            width: 10rem;
+            height: 10rem;
+            background-color: pink;
+            /* 3.rem的优点就是可以通过修改html里面的文字大小来改变页面中元素的大小可以整体控制 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+
+</body>
+
+</html>

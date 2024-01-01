@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            /*perspective: 400px;*/
+        }
+
+        .box {
+            /*position: relative;*/
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+
+            /* 让背面的紫色盒子保留立体空间 给父级添加的 */
+            /*transform-style: preserve-3d;*/
+            perspective: 400px;
+
+            border: 1px solid  #cccccc;
+        }
+
+
+        .leftDoor{
+            float: left;
+            width: 150px;
+            height: 300px;
+            transform-origin: left center;
+            background:  url("./media/ym.png");
+            background-size: 150px 300px;
+
+            transition: all 2s;
+        }
+
+
+        .rightDoor{
+            float: left;
+            width: 150px;
+            height: 300px;
+            transform-origin: right center;
+            background:  url("./media/ym.png");
+            background-size: 150px 300px;
+
+            transition: all 2s;
+        }
+
+
+        .box:hover .leftDoor{
+            transform: rotateY(60deg);
+        }
+
+        .box:hover .rightDoor{
+            transform: rotateY(-60deg);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <div class="leftDoor">左门</div>
+    <div class="rightDoor">右们</div>
+</div>
+</body>
+
+</html>

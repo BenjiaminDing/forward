@@ -1,0 +1,353 @@
+/*技术选项主要使用flex */
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden; /*水平方向 不要出现滚动条*/
+    -webkit-tap-highlight-color: transparent;
+}
+*{
+    /*margin: 0;*/
+    /*padding: 0;*/
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+/*div {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+ul li{
+    list-style: none;
+}
+header {
+
+    position: fixed; /*01 固定定位以屏幕之间关系和 body没关系， 宽度不会受到body约束，必须单独数字宽度范围*/
+    top: 0;
+    left: 50%;  /*02 margin值无效 , translateX 可以让header剧中*/
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /*使用固定定位 必须有宽度 必须单独数字宽度范围*/
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+
+    height: 44px;
+    border-radius: 3px 3px 0 0;
+    background-color: #f6f6f6;
+
+
+}
+
+header {
+    display: flex; /* 为子类 准备*/
+}
+/*当我们为父盒子设为 flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。*/
+
+
+
+
+header  .custInfo{
+    width: 44px;
+    height: 100%;
+    color: #0ba4e2;
+    text-align: center;
+}
+
+header  .custInfo a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+
+    /* 定位名字*/
+    position: relative;
+
+}
+header  .custInfo a img{
+    width: 30px;
+    height: 30px;
+    background-color: #f0ad4e;
+}
+header  .custInfo a:after{
+    position: absolute;
+    left: 10px;
+    top: 24px;
+    content: '张三';
+
+    /*margin-left: 2px;*/
+}
+
+
+header  .search{
+
+
+    /*background-color: #b3d4fc;*/
+
+}
+.search{
+    width: 100%;
+
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    margin: 7px 10px;
+    /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+    /*box-shadow:  -5px 4px 4px  #ccc;*/
+    box-shadow:  -5px 4px 4px  rgba(0,0,0,0.4);
+
+
+
+    padding-left: 30px;
+    line-height: 26px;
+    font-size: 12px;
+
+    color: #666;
+
+
+    position: relative;
+}
+
+.search::before{
+    position: absolute;
+    left: 5px;
+    top: 3px;
+
+    content: '';
+    background: url("../images/sprite.png") no-repeat  -55px -275px;
+    background-size: 104px auto;
+    width: 20px;
+    height: 20px;
+
+    /*margin: 3px 8px;*/
+    /* background-color: #f0ad4e;*/
+}
+
+.focus {
+    width: 100%;
+    /*height: 100px;*/
+    margin-top:44px ;
+}
+
+.focus  img{
+    display: inline-block;
+    width: 100%;
+    /*height: 100px;*/
+
+
+}
+
+.local-nav{
+    height: 64px;
+
+    border-radius: 8px;
+    margin: 3px 4px;
+
+    display: flex;
+}
+
+.local-nav li{
+    list-style: none;
+    flex: 1;
+    /*background-color: #b3d4fc;*/
+}
+
+.local-nav li a{
+    display: flex;
+    /*background: url("../images/");*/
+    flex-direction: column;  /*   Y设置为主  */
+    align-items: center;   /*    侧轴剧中 */
+
+    font-size: 12px;
+}
+/*  flex里面 不会出外边距塌陷问题  */
+.local-nav li  [class^="local-nav-icon"] {
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+    background: url(../images/localnav_bg.png)  no-repeat  0px 0px;
+    background-size: 32px auto;
+}
+
+.local-nav li .local-nav-icon-icon2{
+    background-position: 0 -32px;
+}
+.local-nav li .local-nav-icon-icon3{
+    background-position: 0 -64px;
+}
+.local-nav li .local-nav-icon-icon4{
+    background-position: 0 -96px;
+}
+.local-nav li .local-nav-icon-icon5{
+    background-position: 0 -128px;
+}
+
+
+nav{
+
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 0  4px  3px;
+}
+
+nav .nav-common{
+    height: 88px;
+    /*background-color: #b3d4fc;*/
+    background-color: pink;
+    /* 3fneg*/
+    display: flex;
+}
+
+nav .nav-common:nth-child(2)
+{
+    margin: 3px 0;
+
+}
+nav .nav-common .nav-items{
+    flex: 1;
+
+    display: flex;/*  是八八也是儿子*/
+    flex-direction: column;
+
+}
+
+
+nav .nav-common .nav-items a{
+    /*  flex 去除 行内元素的 属性 可以设置宽高 */
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);/*  文字影月 */
+
+
+}
+/*权重*/
+nav  .nav-items a:first-child{
+    border-bottom: 1px solid #fff;
+}
+nav .nav-common .nav-items:first-child a {
+    /*.nav-items:nth-child(1) a {*/
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+/*nav .nav-common:nth-child(-n+2){*/
+/*    border-right: 1px solid #fff;*/
+/*}*/
+nav .nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+nav .nav-common:nth-child(1){
+    background: -webkit-linear-gradient(left,#fa5b55, #FA994D);
+}
+
+nav .nav-common:nth-child(2){
+    background: -webkit-linear-gradient(left,#4B90ED, #53BCED);
+}
+
+nav .nav-common:nth-child(3){
+    background: -webkit-linear-gradient(left,#34C2A9, #6CD559);
+}
+.subnav-entry{
+    display: flex;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.subnav-entry li{
+    /* 里面的子盒子可以写 % 相对于父级来说的 */
+    flex: 20%;
+}
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry-icon{
+    width: 28px;
+    height: 28px;
+    /*background-color: pink;*/
+    margin-top: 4px;
+    background: url("../images/subnav-bg.png") no-repeat;
+    background-size: 28px auto;
+}
+
+
+.sales-box {
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+    margin: 4px;
+}
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+.sales-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-hd h2::after {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    content: "";
+    width: 79px;
+    height: 15px;
+    background: url(../images/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+.row a img {
+    width: 100%;
+}

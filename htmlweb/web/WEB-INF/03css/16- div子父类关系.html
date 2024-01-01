@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内边距会影响盒子实际大小</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            border: 0 solid #000000 ;
+            background-color: pink;
+            /*padding: 10px;*/
+        }
+    /* 可以发现 内外div宽度都是150 ， 内部div宽度和外面一样*/
+
+
+    </style>
+</head>
+<body>
+
+
+<hr>
+<div class="box1" >
+    <div>测试切换模式</div>
+</div>
+
+</body>
+</html>

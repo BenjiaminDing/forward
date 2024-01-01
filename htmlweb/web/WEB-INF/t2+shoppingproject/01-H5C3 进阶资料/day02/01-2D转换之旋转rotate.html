@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            /* 顺时针旋转45度 */
+            /* transform: rotate(45deg); */
+            border-radius: 50%;
+            border: 5px solid pink;
+            /* 过渡写到本身上，谁做动画给谁加 */
+            transition: all 2s;
+        }
+
+        /*
+         transform:translate(100px,50px);向右移动100px,向下移动50px
+        transform:translate(-100px,500px); 向左移动100px,向上移动50px
+        transform:translate(100%,50%)      沿着x轴自身的走100%像素,Y轴的50%像素
+        transform:translate(100px)相当于transform:translateX(100px); /*沿着x轴走100px
+        transform:translateY(100px);  沿着Y轴移动100px
+        */
+        img:hover {
+            transform: rotate(334deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="media/tp.png" alt="">
+</body>
+
+</html>

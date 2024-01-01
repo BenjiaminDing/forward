@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字围绕浮动元素的妙用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pic {
+            float: left;
+            width: 120px;
+            height: 60px;
+            margin-top: 50px;
+        }
+        .pic img {
+            /*  宽度和 父类一样了  限制如*/
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+        <div class="pic">
+            <img src="images/img.png" alt="">
+        </div>
+
+</body>
+</html>

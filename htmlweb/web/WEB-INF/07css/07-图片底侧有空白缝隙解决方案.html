@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片底侧空白缝隙解决方案,  原因基线原因</title>
+
+<!--      原因是行内块元素是和基线对齐的
+
+
+
+bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。
+
+主要解决方法有两种：
+
+1.**给图片**添加 **vertical-align:middle | top| bottom** 等。 （提倡使用的）
+-->
+    <style>
+        div {
+            border: 2px solid red;
+        }
+        img {
+             /*vertical-align: middle;*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/ldh.jpg" alt="">
+
+
+    </div>
+
+    <hr>
+    <p>------------------------------------------------</p>
+    <hr>
+<div>
+
+    <a href="#"><img src="images/ldh.jpg" alt=""></a>
+</div>
+</body>
+</html>

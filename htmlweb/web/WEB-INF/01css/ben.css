@@ -1,0 +1,17 @@
+/* 这css文件里面只有样式没有标签 */
+#outLinkcss {
+    color:  yellowgreen;
+}
+
+#backbtn{
+    width: 20px;
+    height: 120px;
+    position: fixed;
+    bottom: 20px;
+    background: greenyellow;
+    left: 90%;
+}
+
+div{
+    color: red;
+}

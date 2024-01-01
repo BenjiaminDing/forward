@@ -1,0 +1,248 @@
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;  /*  默认值   类似  font: 12px/1.5 Microsoft YaHei*/
+}
+li{
+    list-style: none;
+}
+img{
+    /*去除图片底部空白间隙*/
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+
+
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*在移动端浏览器默认的外观在iOS上加上这个属性  才能给按钮和输入框自定义样式*/
+
+input {
+    -webkit-appearance: none;
+}
+
+
+/*禁用长按页面时的弹出菜单*/
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    height: 45px;
+}
+.app li{
+    float: left;
+    height: 45px;
+    line-height: 45px; /* 让子类的文章居中*/
+    text-align: center;
+    background-color: #333333;
+
+    color: #fff;
+}
+/*  img是行内块 元素*/
+.app ul li:nth-child(1){
+    width: 8%;
+
+
+}
+.app ul li:nth-child(1) img{
+    width: 10px;
+    vertical-align: middle;
+}
+
+.app ul  li:nth-child(2){
+    width: 10%;
+
+}
+.app ul li:nth-child(2) img{
+    width: 30px;
+    vertical-align: middle;  /*  vertical-align 默认是 bottom */
+}
+.app ul  li:nth-child(3){
+    width: 57%;
+}
+
+.app  ul li:nth-child(4){
+    width: 25%;
+    background-color: #f63515;
+}
+
+
+.search-wrap{
+
+    height: 44px;
+    position: fixed;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    color: #fff;
+    /*    解决外边距塌陷问题*/
+    overflow: hidden;
+}
+.search-btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*background-color: #f0ad4e;*/
+    width: 40px;
+    height: 44px;
+
+}
+.search-login{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*background-color: #b3d4fc;*/
+    width: 40px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+
+}
+
+
+.search-btn:before{
+    content: '';
+    display: block;
+
+    width: 20px;
+    height: 18px;
+    background: url("../images/s-btn.png") no-repeat ;
+    background-size: 20px 18px;
+    margin-top: 14px;
+    margin-left: 15px;
+}
+.search{
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 50px;
+    margin-top: 7px;    /* 由于父级和上面元素没有距离 会出现外边距合并 塌陷问题提*/
+
+    border-radius: 15px;
+}
+
+.search-wrap .jd-icon{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    background: url("../images/jd.png")  no-repeat;
+    background-size: 20px 15px;
+
+}
+
+.search-wrap .jd-icon::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 15px;
+    top: 0;
+    left: 28px;
+    background-color: #ccc;
+
+}
+
+.search-wrap .sou{
+    position: absolute;
+    top: 8px;
+    left: 46px;
+    width: 18px;
+    height: 15px;
+    background: url("../images/jd-sprites.png")  no-repeat -81px 0;
+    background-size: 200px  auto;
+
+}
+
+.slider img{
+    width: 100%;
+    /*height: ;*/
+}
+
+.main-content .brand  {
+
+
+    overflow: hidden;
+    border-radius: 20px 10px 0 0;
+    /*    */
+}
+
+.main-content .brand>div{
+    float: left;
+    width: 33.33%;
+}
+.main-content .brand  a{
+    display: block;
+}
+.main-content .brand  a img{
+    width: 100%;
+}
+nav{
+    padding-top: 5px;
+    background-color: #fff;
+}
+nav a{
+    width: 20%;
+    float: left;
+
+    text-align: center;
+}
+
+nav a img{
+    width: 40px;
+ margin: 10px 0;
+    /*float: left;*/
+}
+
+nav a span{
+   display: block;
+}
+
+.news a {
+   float: left;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.news a img{
+    width: 100%;
+}
+
+.news a:nth-child(1){
+    width: 50%;
+
+
+}
+
+
+.news a:nth-child(n+2){
+    width: 25%;
+
+border-left: 1px solid #ccc;
+}
+

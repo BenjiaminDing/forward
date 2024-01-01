@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS字体属性之复合属性</title>
+    <style>
+       /* 想要div文字变倾斜 加粗 字号设置为16像素 并且 是微软雅黑 */
+       /*使用 font 属性时，必须按上面语法格式中的顺序书写，不能更换顺序，并且各个属性间以空格隔开 不需要设置的属性可以省略（取默认值），但必须保留 font-size 和 font-family 属性，否则 font 属性将不起作用*/
+       div {
+           height: 100px;
+           /* font-style: italic;
+           font-weight: 700;
+           font-size: 16px;
+           font-family: 'Microsoft yahei'; */
+           /* 复合属性: 简写的方式  节约代码 */
+           /* font: font-style  font-weight  font-size/line-height  font-family; */
+           /* font: italic 700 16px 'Microsoft yahei'; */
+           /*font: italic 700 64px/100px '黑体';*/
+           /*此时子元素的行高是：当前子元素的文字大小 * 4=盒子高度 ,    */
+           font: italic 700 25px/4 '黑体';
+       }
+    </style>
+</head>
+<body>
+   <div >三生三世十里桃花,一心一意百行代码</div>
+</body>
+</html>

@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    /*background-color: red;*/
+    /*height: 10px;*/
+}
+
+.header{
+    height: 70px;
+    padding-top: 30px;
+    background-color: #ccc;
+}
+
+.header .logo{
+    float: left;
+    width: 195px;
+    height: 42px;
+
+    /*background-color: yellow;*/
+
+}
+
+/*  246+9 】】 195 255 410 */
+.header .nav{
+    float: left;
+    width: 253px;
+    height: 42px;
+    /*background-color: #888888;*/
+
+    margin-left: 70px;
+
+}
+
+
+.nav a{
+    text-decoration: none;
+}
+
+.header .nav ul{
+    width: 270px;
+    /*height: 2px;*/
+    /*background-color: red;*/
+
+}
+
+.header .nav li{
+    float: left;
+}
+.header .nav li a{
+    display: block;
+    /*height: 42px;*/
+    padding: 0 7px;
+    /*  a 块在 nav里面 nav--h42, a下边线2px  所以上面content+padding是40 */
+    line-height: 40px;
+    /*background-color: greenyellow;*/
+    margin-right: 28px;
+    font-size: 18px;
+    color: #050505;
+}
+.header .nav li a:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+
+.header .search{
+    float: left;
+    /* 有边框*/
+    width: 412px;
+    height: 42px;
+    /*background-color: #8888ee;*/
+    margin-left: 85px;
+
+}
+
+.header .search  input{
+    /*  input和button  解决行内块之间间隙问题使用 float */
+    float: left;
+    /*  339+32=360  注意调整*/
+    width: 340px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: none ;
+    /*    去掉点击input 内侧黑色边框*/
+    outline: none;
+
+    padding-left: 21px;
+    font-size: 14px;
+    color: #bfbfbf;
+
+}
+
+.header .search  button{
+    /*    解决行内块之间间隙问题使用 float */
+    float: left;
+    /* input和buuton属于行内块  ，行内块之间会有间隙*/
+
+    width: 50px;
+    height: 42px;
+    background-color: #00a4ff;
+    /*     button会自带边框 要取消*/
+    border: none;
+
+    background-image: url(./images/btn.png);
+    background-position: left center;
+}
+/* button按钮他默认是css3盒子模型, input默认是css2盒子模型*/
+
+
+.header .user{
+    /* 名字可能比较长   118+53*/
+    float: right;
+    width: 153px;
+    height: 42px;
+    /*background-color: #8888cc;*/
+    margin-left: 30px;
+
+}
+
+.header .user img{
+    float: left;
+    /*    用户类和商品类图片我们给他固定 w h*/
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+}
+
+
+.header .user span {
+    float: left;
+    /*    用户类和商品类图片我们给他固定 w h*/
+
+    margin-left: 5px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666666;
+}
+.banner{
+    background-color: #1c036c;
+    height: 420px;
+}
+.banner .w{
+    height: 420px;
+    position: relative;
+    /*background: url(./images/banner2.png)  no-repeat;*/
+    /*background: black url(images/bg.jpg) no-repeat fixed center top;*/
+}
+.banner .w .subNav{
+    /*float: left;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 100%;
+    /*background-color: #000000;*/
+    background: rgba(0,0,0,0.3);
+    /*opacity: 0.3;  盒子半透明*/
+}
+
+.banner .w .subNav ul{
+    /*420 -28 28 =364*/
+    margin-top: 12px;
+    padding: 0 20px;
+}
+
+.banner .w .subNav  a{
+    /*  如果这里没有设置 块级元素  a是行内元素不会被 撑大， 点击范围比较小*/
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    /* 44-14  30  /2  15 */
+    line-height: 44px;
+}
+.banner .w .subNav  a span{
+    float: right;
+}
+.banner .w .subNav  a:hover{
+    color: #00a4ff;
+}
+
+.banner .w .course{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    /*float: right;*/
+    width: 228px;
+    height: 300px;
+    /*margin-top: 50px;*/
+    background-color: #fff;
+}
+/*  259 41*/
+.banner .w .course .hd{
+    line-height: 48px;
+    text-align: center;
+    background-color: #9BCEEA;
+
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/*  ul---li 70*/
+.banner .w .course .hb li{
+    width: 192px;
+    /*  33 pad:   16 14   63*/
+    height: 63px;
+    margin-left: 19px;
+    /*background-color: orange;*/
+    border-bottom: 2px solid  #e5e5e5;
+
+}
+.banner .w .course .hb li a{
+    display: block;
+    height: 33px;
+    width:163px ;
+    /*  切换*/
+    /*margin-top: 14px;*/
+    /*margin-bottom: 16px;*/
+    padding-top: 14px ;
+    padding-bottom: 16px ;
+;
+    /*background-color: red;*/
+}
+.banner .w .course .hb li span{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4e4e4e;
+
+}
+.banner .w .course .hb li  em{
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    color: #a5a5a5;
+
+
+}
+
+.banner .w .course .hb .all{
+    display: block;
+    width: 198px;
+    /*  33 pad:   16 14   63*/
+    height: 38px;
+    margin-left: 14px;
+    margin-top: 4px;
+    /*margin: 0 auto;*/
+    line-height: 41px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+    color: #00a4ff;
+
+    /*background-color: mediumvioletred;*/
+    border: 1px solid #00a4ff;
+}
+
+.recommend {
+    /*width: 1200px;*/
+    height: 60px;
+    line-height: 60px;
+    background-color:  #fff;
+    margin-top: 8px;
+    box-shadow: 0px 2px 3px 0px rgba(118,118,118,0.2);
+    font-size: 16px;
+
+}
+.recommend>h4{
+    float: left;
+    margin-left: 32px;
+    color: #00a4ff;
+}
+
+.recommend>ul  {
+    float: left;
+    margin-left: 34px;
+}
+.recommend a  {
+    text-decoration: none;
+}
+
+
+.recommend>ul li {
+    float: left;
+    /*background-color: yellowgreen;*/
+}
+
+
+.recommend>ul li  a{
+
+    padding: 0 30px;
+    color: #050505;
+    border-left: 1px solid #000000;
+}
+
+/* a 行内元素 浮动以后也是具有 行内块元素的 属性 */
+.recommend  .update {
+    float: right;
+    margin-right: 26px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+.good .hd {
+    height: 40px;
+    /*   40  33  7*/
+    margin-top: 37px;
+    background-color: yellowgreen;
+}
+.good .hd h3{
+
+    float: left;
+    background-color: greenyellow;
+    font-size: 20px;
+    color: #494949;
+}
+
+.good  .hd a{
+    text-decoration: none;
+    float: right;
+    margin-top: 8px;
+    margin-right: 35px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.good  .bd{
+    /*height: 800px;*/
+    background-color: #a5a5a5;
+
+}
+
+.good  .bd  ul li{
+    /*!* hot图标*!*/
+    position: relative;
+}
+
+
+
+.good  .bd li{
+    float:  left;
+    width: 228px ;
+    height: 270px ;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 0px
+    rgba(118, 118, 118, 0.5);
+
+    margin-right: 15px;
+
+}
+.good  .bd ul li>em> img{
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+
+
+.good  .bd  .n5{
+    margin-right:0 ;
+}
+
+.good  .bd li > img{
+    width: 228px;
+
+}
+.good  .bd li  a{
+
+    /*float:  left;*/
+
+    display: block;
+    width: 184px;
+    /*  184  +24 +20   =228*/
+    line-height: 20px;
+    margin-top: 25px ;
+    margin-left: 24px ;
+    /*height: 32px;*/
+    background-color: orange;
+
+    text-decoration: none;
+
+}
+.good  .bd li div {
+    /*float:  left;*/
+
+    margin-left: 20px;
+    margin-top: 23px;
+    font-size: 12px;
+    background-color: pink;
+    color: #ff7c2d;
+}
+
+.good  .bd li div  span{
+    /*color: #ff7c2d;*/
+}
+.good  .bd li div  em{
+    color: #999999;
+}
+/*  清除浮动方法之一  伪元素清除浮动*/
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/* 下*/
+.softwareBase{
+    /* w1209*/
+    height: 433px;
+    /*background-color: #55585a;*/
+    margin-top: 38px;
+}
+
+.softwareBase .softTitle
+{
+    height: 41px;
+    /*background-color: #00a4ff;*/
+}
+
+
+.softwareBase .softTitle .t1
+{
+    float: left;
+    background-color: #aa600b;
+    font-size: 20px;
+    color: #494949;
+}
+
+.softwareBase .softTitle .allCourse a
+{
+
+    float: right;
+    /*background-color: #aa893d;*/
+    margin-top: 5px;
+    margin-right: 40px;
+    font-size: 12px;
+    color:  #a5a5a5;
+    text-decoration: none;
+
+}
+
+.softwareBase .softTitle .level
+{
+    float: left;
+    width: 338px;
+    /*height: 15px;*/
+    margin-left: 350px;
+    margin-top: 5px;
+    background-color: lightgoldenrodyellow;
+    font-size: 16px;
+    color: #868686;
+
+}
+.softwareBase .softTitle .level ul{
+    /*/338+70*/
+    width: 408px ;
+}
+
+
+.softwareBase .softTitle .level li{
+    float: left;
+    /*background-color: red;*/
+    margin-right: 70px;
+
+}
+
+.softwareBase .softBaseIntro {
+    height: 392px;
+    background-color: #666666;
+}
+
+
+.softwareBase .softBaseIntro    .left {
+    float: left;
+    width: 228px;
+    height: 392px;
+    background-color: pink;
+}
+
+.softwareBase .softBaseIntro    .right {
+    float: left;
+    width: 957px;
+    height: 392px;
+}
+
+.softwareBase .softBaseIntro   .right_top {
+    /*background-color: lightgoldenrodyellow;*/
+    width: 957px;
+    height: 100px;
+    margin-left: 15px;
+}
+.softwareBase .softBaseIntro  .right_bottom {
+    background-color: lightgoldenrodyellow;
+    width: 972px;
+    height: 292px;
+
+}
+
+.softwareBase .softBaseIntro   .right_bottom li {
+    float: left;
+    margin-top: 23px;
+    margin-left: 16px;
+}
+
+
+.summaryLan{
+    position: fixed;
+    width: 183px;
+    height: 425px;
+    right: 50%;
+    top: 150px;
+    /* 2. 利用margin 走版心盒子宽度的一半距离 */
+    margin-right: 625px;
+    background-color: #ffffff;
+
+
+}
+.summaryLan ul{
+    width: 133px;
+    height: 372px;
+    margin-top: 27px;
+    margin-left: 25px;
+    background-color: #fff;
+
+
+}
+
+.summaryLan ul li a {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 16px;
+    font-size: 14px;
+
+    color: #000000;
+
+}
+.summaryLan ul li a:hover{
+    color: #00a4ff;
+}
+
+
+.footer{
+    /*417-33=  384*/
+    height: 384px;
+    margin-top: 25px;
+    padding-top: 33px;
+    background-color: #55585a;
+    /*margin-top: 33px;*/
+
+}
+.footer .copyright {
+    float: left;
+}
+.footer .copyright img{
+
+    margin-bottom: 25px;
+}
+
+.footer .copyright p{
+    width: 432px;
+    font-size: 12px;
+    color: #666666;
+
+}
+.footer .copyright a{
+    display: block;
+    width: 118px;
+    height: 34px;
+    border:1px solid #00a4ff;
+    color: #00a4ff;
+    text-align: center;
+    line-height: 34px;
+    font-size: 16px;
+    text-decoration: none;
+
+    margin-top: 15px;
+
+}
+
+.footer .links{
+    float: right;
+    background-color: orange;
+}
+
+
+.footer .links  dl{
+    float: left;
+    width: 224px;
+    font-size: 12px;
+
+}
+
+.footer .links  dl dt{
+    margin-bottom: 15px;
+    font-size: 16px;
+
+
+}
+
+.footer .links  .last{
+    width: 95px;
+
+}
+
+
+.dj {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+}
+
+/*
+#ff7c2d
+
+#999999
+
+
+
+box-shadow: 0px 2px 5px 0px
+		rgba(118, 118, 118, 0.5);
+*/
+
+
+
+/*28 18 18  64*/
+/*.40 {*/
+/*    width: 1200px;*/
+/*    height: 60px;*/
+/*    background-color: #ffffff;*/
+/*    box-shadow: 0px 2px 3px 0px*/
+/*    rgba(118, 118, 118, 0.2);*/
+/*}*/
+
+
+
+
+

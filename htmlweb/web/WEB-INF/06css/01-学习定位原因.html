@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相对定位</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*  如果要求一定 一个小按钮在下面方框里面 自由移动  由于存在盒子多级关系，  浮动 就不好用了
+
+        就使用定位 position
+
+        */
+
+        .box1{
+            /*position: relative;*/
+            width: 300px;
+            height: 300px;
+            border: 1px solid #55585a;
+        }
+        .b1{
+            /*margin-top:20px;*/
+            background-color:  orange;
+            padding: 14px  23px;
+
+
+        }
+        .b2{
+            margin: 30px 20px;
+            padding: 18px  25px;
+            background-color:  yellow;
+        }
+
+        a{
+            display: inline-block;
+            background-color: #aa893d;
+
+        }
+
+        /* 通过改变top  right值改变 按钮在大盒子里面的位置*/
+       .box1 button{
+            position: absolute;
+            top: 70px;
+            left: 40px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="b1">
+        <div class="b2">他们</div>
+    </div>
+    <a href="#"><img src="./images/pvp.png" alt=""></a>
+
+<!--     浮动 按钮一个-->
+    <button><img src="./images/btn.png" alt=""></button>
+
+</div>
+
+
+</body>
+</html>

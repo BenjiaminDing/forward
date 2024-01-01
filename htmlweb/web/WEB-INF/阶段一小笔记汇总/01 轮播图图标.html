@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .b1{
+            position: relative;
+            width: 500px;
+            height: 400px;
+            background-color: #a5a5a5;
+
+            margin: 100px auto;
+        }
+        .leftIcon{
+            display: block;
+            width: 40px;
+            height: 60px;
+            background-color: skyblue;
+        }
+        .rightIcon{
+            display: block;
+            width: 40px;
+            height: 60px;
+            background-color: skyblue;
+        }
+
+        .leftIcon{
+
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            /* 让小框文本水平居中*/
+            line-height: 60px;
+            text-align: center;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            text-decoration: none;
+        }
+
+        .rightIcon{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -30px;
+            /* 让小框文本水平居中*/
+            line-height: 60px;
+            text-align: center;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            text-decoration: none;
+        }
+        .moveIcon{
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            background-color: lightgoldenrodyellow;
+            /* 移动点击位置*/
+            left: 0;
+            bottom: 0;
+            margin-left: 100px;
+            margin-bottom: 50px;
+            /* 左右圆角*/
+            border-radius: 40px;
+
+        }
+        .moveIcon li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        /*     左浮动*/
+        /*    10+20+10*/
+            float: left;
+            margin: 10px;
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div>
+    <div class="b1">
+        <a href="#" class="leftIcon" ><</a>
+        <a href="#" class="rightIcon" >> </a>
+        <ul class="moveIcon">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

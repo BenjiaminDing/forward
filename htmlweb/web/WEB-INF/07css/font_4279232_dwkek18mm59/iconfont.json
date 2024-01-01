@@ -1,0 +1,16 @@
+{
+  "id": "4279232",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "36810124",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    }
+  ]
+}

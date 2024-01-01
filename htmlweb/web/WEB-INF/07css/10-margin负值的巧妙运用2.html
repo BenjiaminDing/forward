@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin负值的巧妙运用</title>
+    <style>
+        /*1.定位则是可以让盒子自由的在某个盒子内移动位置或者固定屏幕中某个位置，
+
+        2 并且可以压住其他盒子。
+        3  相对定位还占用原来位置  不是脱标 */
+        ul li {
+            /*position: relative;*/
+            float: left;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            border: 5px solid blueviolet;
+            /* 重合边线*/
+            /*  总体 左移5  右边 和左边盒子重叠5 px*/
+            margin-left: -5px;
+        }
+
+        ul li:hover {
+            /*1. 如果盒子没有定位，则鼠标经过添加相对定位即可  使用相对定位 覆盖其他盒子特点*/
+            position: relative;
+            border: 5px solid red;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+
+</html>

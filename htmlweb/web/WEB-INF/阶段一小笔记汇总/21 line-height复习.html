@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            /* css3*/
+            box-sizing: border-box;
+        }
+        .search{
+            position: absolute;
+            width: 538px;
+            height: 36px;
+            background-color: #00b265;
+            left: 50%;
+            margin-left: -269px;
+            /*  56-31=25*/
+            top: 25px;
+            border:   solid 2px #b1191a;
+
+            line-height: 36px;
+
+        }
+
+
+
+        .search   input{
+            /* 538-2-2-80=454*/
+            /*    36-2-2*/
+            /*float: left;*/
+
+            display: inline;
+            width: 454px;
+            height: 26px;
+            /* 统一去掉外边框border0和点击的内边框 outline: none;*/
+            border: 0;
+            outline: none;
+
+            padding-left: 12px;
+
+        }
+
+        .search button{
+            /*float: right;*/
+            display: inline;
+            width: 75px;
+            height: 24px;
+
+            border: none;
+
+            background-color: #b1191a;
+        }
+
+    </style>
+
+</head>
+<body>
+<p>
+<div  class="search">
+    <input type="text" value="语言开发">
+    <!--  使用背景图比较好-->
+    <button>搜索</button>
+</div>
+
+</p>
+
+</body>
+</html>
